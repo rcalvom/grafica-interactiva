@@ -19,3 +19,15 @@ browser-sync start --server --files "."
 Para la instalación de la herramienta anteriormente mencionada seguí las instrucciones de la siguiente página
 
 https://browsersync.io/
+
+## Despliegue de sitio web en GitHub Pages
+
+Para facilitar la visualización de este sitio web he creado un repositorio en Github donde he subido todo el código correspondiente a la página.
+
+Se puede encontrar el código fuente en el siguiente enlace:
+
+https://github.com/rcalvom/grafica-interactiva
+
+De igual manera el sitio web en un servidor estático se puede encontrar en este enlace:
+
+https://rcalvom.github.io/grafica-interactiva/historia.html

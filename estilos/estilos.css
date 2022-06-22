@@ -1,0 +1,319 @@
+/*
+    Hoja de estilos para el contenido del taller de la clase gráfica interactiva
+    de la Universidad Nacional de Colombia - Realizado por Ricardo Andrés Calvo
+*/
+
+/*
+    NOTA IMPORTANTE: Siguiendo las indicaciones de la clase, he definido tres tamaños
+    de pantallas para usar en los filtros:
+    - Tamaño pequeño: entre 480px y 800px (Teléfono celular)
+    - Tamaño mediano: entre 800px y 1200px (Tableta o portatil sencillo)
+    - Tamaño grande: entre mayores a 1200px (Pantalla de escritorio)
+*/
+
+/*
+    Estilos exclusivos para tamaños de pantallas pequeños
+*/
+@media only screen and (min-width: 480px) and (max-width: 800px) {
+    /*Estilos para el texto de contenido y los titulos de secciones*/
+    .texto-de-contenido, .titulo-seccion, .indice {
+        /*Se define un ancho máximo*/
+        max-width: 440px;
+    }
+
+    /*Estilos para el boton de la barra de navegacion*/
+    .boton-barra-de-navegacion {
+        /*Se alinea el contenido al centro*/
+        text-align: center;
+        /*Coloca el margen automático para que el contenido quede centrado*/
+        margin: auto;
+    }
+
+    /*Estilos para las imagenes de la galeria*/
+    .galeria img {
+        /*Se asigna un ancho a las imágenes*/
+        width: 400px;
+    }
+
+    /*Estilos para la fotografía de las referencias*/
+    .fotografia img {
+        width: 250px;
+    }
+}
+
+/*
+    Estilos exclusivos para tamaños de pantallas medianos
+*/
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+    /*Estilos para el texto de contenido y los titulos de secciones*/
+    .texto-de-contenido, .titulo-seccion, .indice {
+        /*Se define un ancho máximo*/
+        max-width: 720px;
+    }
+
+    /*Estilos para las imagenes de la galeria*/
+    .galeria img {
+        /*Se asigna un ancho a las imágenes*/
+        width: 600px;
+    }
+
+    /*Estilos para la fotografía de las referencias*/
+    .fotografia img {
+        width: 300px;
+    }
+}
+
+/*
+    Estilos exclusivos para tamaños de pantallas grandes
+*/
+@media only screen and (min-width: 1200px) {
+    /*Estilos para el texto de contenido y los titulos de secciones*/
+    .texto-de-contenido, .titulo-seccion, .indice {
+        /*Se define un ancho máximo*/
+        max-width: 1080px;
+    }
+
+    /*Estilos para las imagenes de la galeria*/
+    .galeria img {
+        /*Se asigna un ancho a las imágenes*/
+        width: 540px;
+        margin: 0.5rem;
+    }
+
+    /*Estilos para la fotografía de las referencias*/
+    .fotografia img {
+        width: 400px;
+    }
+
+}
+
+/*
+    Estilos exclusivos para tamaños de pantallas medianos y grandes
+*/
+@media only screen and (min-width: 800px) {
+    /*Estilos para la barra de navegación extendida*/
+    .navbar-expand-custom {
+        /*Se indica que los elementos se van a colocar como una fila*/
+        flex-direction: row;
+        /*Se indica que la barra de navegacion será en una única linea*/
+        flex-wrap: nowrap;
+        /*Se indica que los elementos de la barra de navegación se alinearan al centro*/
+        justify-content: center;
+    }
+
+    /*Estilos para los elementos de la barra de navegación extendida*/
+    .navbar-expand-custom .navbar-nav {
+        /*Se indica que los elementos se van a colocar como una fila*/
+        flex-direction: row;
+    }
+
+    /*Estilos para los enlaces de la barra de navegación extendida*/
+    .navbar-expand-custom .nav-link {
+        /*Se agrega un poco de margen interno a la derecha de cada enlace*/
+        padding-right: 0.5rem;
+        /*Se agrega un poco de margen interno a la izquierda de cada enlace*/
+        padding-left: 0.5rem;
+    }
+    
+    /*Estilos para el contendio de la barra de navegacion*/
+    .navbar-expand-custom .navbar-collapse {
+        /*Se indica el tipo de contenido*/
+        display: flex !important;
+        /*Se indican las bases del contenido*/
+        flex-basis: auto;
+    }
+
+    /*Estilos para el botón de la barra de navegación*/
+    .navbar-expand-custom .navbar-toggler {
+        /*Se oculta el botón de la barra de navegación*/
+        display: none;
+    }
+}
+
+/*
+    NOTA: De aqui en adelante se colocan estilos que son comunes para los 3 tamaños de pantallas,
+    es por eso que estos estilos no van dentro de ninguna sentencia @media query.
+*/
+
+/*Estilos para la etiqueta raíz*/
+html {
+    /*Se le da a la raiz el 100% del ancho posible*/
+    width: 100%;
+    /*Se le da a la raiz el 100% de la altura posible*/
+    height: 100%;
+}
+
+/*Estilos para la etiqueda body*/
+body {
+    /*Se le asigna una imagen al fondo de la página*/
+    background-image: url(../imagenes/fondo.jpg);
+    /*Se impide que la imagen de fondo pueda repetirse*/
+    background-repeat: no-repeat;
+    /*Se coloca la imagen con anchura automatica y altura del 100%*/
+    background-size: auto 100%;
+    /*Se coloca la imagen en el centro (horizontalmente) y abajo (verticalmente)*/
+    background-position: center bottom;
+    /*Coloca fija la imagen de fondo en deplazamiento*/
+    background-attachment: fixed;
+    /*Se le indica a la etiqueta tener un ancho total*/
+    width: 100%;
+    /*Se quitan los margenes externos*/
+    margin: 0%;
+    /*Se quitan los margenes internos*/
+    padding: 0%;
+}
+
+/*Estilos para titulo principal*/
+h1 {
+    /*Se cambia el tamaño del titulo principal*/
+    font-size: 2rem;
+}
+
+/*Estilos para titulo secundario*/
+h2 {
+    /*Se cambia el tamaño del titulo secundario*/
+    font-size: 1.75rem;
+}
+
+/*Estilos para etiquetas p, a*/
+p, a {
+    /*Se cambia el tamaño de los textos*/
+    font-size: 1.25rem;
+    /*Se coloca un blanco de color de fuente*/
+    color: rgb(224, 224, 224);
+}
+
+/*Estilos del titulo principal de las páginas*/
+.titulo-principal {
+    /*Se alinea el texto al centro*/
+    text-align: center;
+    /*Se coloca un fondo negro traslucido al titulo*/
+    background-color: rgba(0, 0, 0, 0.75);
+    /*Se coloca un blanco de color de fuente*/
+    color: rgb(224, 224, 224);
+    /*Se le da un poco de margen interno al titulo*/
+    padding: 1rem;
+    /*Se le da un poco de margen externo inferior al titulo*/
+    margin-bottom: 1rem;
+}
+
+/*Estilos de la barra de navegacion*/
+.barra-de-navegacion {
+    /*Se coloca un fondo negro traslucido al titulo*/
+    background-color: rgba(0, 0, 0, 0.75);
+    /*Se elimina el margen superior*/
+    padding-top: 0.25rem !important;
+    /*Se elimina el margen inferior*/
+    padding-bottom: 0.25rem !important;
+}
+
+/*Estilos del contenido de la barra de navegación*/
+.barra-de-navegacion-contenido {
+    /*Se alinea el texto al centro*/
+    text-align: center;
+    /*Se colocan margenes automáticos para alinear al centro*/
+    margin: auto;
+}
+
+/*Estilos para los elementos al interior de la barra de navegación*/
+.barra-de-navegacion-contenido li {
+    /*Se alinea el texto al centro*/
+    text-align: center;
+    /*Se colocan margenes para dar un poco de separación*/
+    margin-left: 0.1rem;
+}
+
+/*Estilos para los botones de la barra de navegacion*/
+.barra-de-navegacion a {
+    /*Se añade un poco de margen izquierdo*/
+    margin-left: 0.5rem;
+    /*Se añade un poco de margen derecho*/
+    margin-right: 0.5rem;
+}
+
+/*Estilos para el titulo de la sección*/
+.titulo-seccion {
+    /*Se colocan margenes automáticos para alinear a la izquierda*/
+    margin: auto;
+    /*Se da un poco de margen superior*/
+    margin-top: 3rem;
+    /*Se da un poco de margen inferior*/
+    margin-bottom: 1rem;
+    /*Se coloca un blanco de color de fuente*/
+    color: rgb(224, 224, 224);
+}
+
+/*Estilos para el texto del contenido*/
+.texto-de-contenido {
+    /*Se colocan margenes automáticos para alinear a la izquierda*/
+    margin: auto;
+    /*Se colocan margenes internos superiores para dar espacio*/
+    padding-top: 0.75rem;
+    /*Se coloca un blanco de color de fuente*/
+    color: rgb(224, 224, 224);
+    /*Se justifica el texto de contenido*/
+    text-align: justify
+}
+
+/*Estilos para indice*/
+.indice {
+    /*Se colocan margenes automáticos para alinear a la izquierda*/
+    margin: auto;
+    /*Se colocan margenes internos superiores para dar espacio*/
+    padding-top: 0.75rem;
+    /*Se colocan margenes internos inferiores para dar espacio*/
+    padding-bottom: 0.75rem;
+    /*Se coloca un blanco de color de fuente*/
+    color: rgb(224, 224, 224);
+}
+
+.indice a {    
+    /*Se coloca un blanco de color de fuente*/
+    color: rgb(224, 224, 224);
+}
+
+.indice a:hover, .texto-de-contenido a:hover {    
+    /*Se coloca un blanco de color de fuente*/
+    color: rgb(128, 128, 128);
+}
+
+/*Estilos para la galeria*/
+.galeria {
+    /*Se centra la galeria*/
+    text-align: center;
+}
+
+/*Estilos para los enlaces de los textos*/
+.texto-de-contenido a {
+    /*Se coloca un color blanco a los enlaces*/
+    color: rgb(224, 224, 224);
+}
+
+/*Estilos para las imagenes*/
+.imagen {
+    height: auto;
+}
+
+/*Estilos para el pie de página*/
+.pie-de-pagina {
+    /*Se alinea el texto al centro*/
+    text-align: center;
+    /*Se coloca un fondo negro traslucido al titulo*/
+    background-color: rgba(0, 0, 0, 0.75);
+    /*Se coloca un blanco de color de fuente*/
+    color: rgb(224, 224, 224);
+    /*Se le da un poco de margen interno al pie de página*/
+    padding: 1rem;
+    /*Se indica que el pie de página debe estar en la parte inferior de la pantalla*/
+    bottom: 0px;
+    /*Se da un poco de margen superior externo al pie de página*/
+    margin-top: 2rem;
+}
+
+/*Estilos para el canvas de Phaser con el mapa interactivo*/
+.mapa-interactivo {
+    /*Se alinea el contenido al centro*/
+    text-align: center;
+    /*Coloca el margen automático para que el contenido quede centrado*/
+    margin: auto;
+}

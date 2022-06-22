@@ -1,0 +1,170 @@
+<!doctype html>
+<!--
+    Documento html con el contenido del taller de la clase gráfica interactiva
+    de la Universidad Nacional de Colombia - Realizado por Ricardo Andŕes Calvo
+-->
+<html>
+    <!--
+        Encabezado, se definen metadatos, el titulo de la página, el icono de
+        la página, se enlaza la  hoja de estilos css al documento html y se
+        adjuntan librerias externas.
+    -->
+    <head>
+        <!--Codificación del documento-->
+        <meta charset="UTF-8">
+        <!--Idioma del sitio web-->
+        <meta lang="es">
+        <!--Titulo del sitio web-->
+        <title>Piltover | La ciudad del progreso</title>
+        <!--Icono del sitio web-->
+        <link rel="icon" type="image/x-icon" href="/imagenes/favicon.ico">
+        <!--Enlace a la hoja de estilos css-->
+        <link href="estilos/estilos.css" rel="stylesheet" type="text/css">
+        <!--
+            Bootstrap 5
+            
+            Se ha utilizado bootstrap 5 para el desarrollo de esta página ya 
+            que esta permite utilizar algunas fuentes, colores, estilos ya
+            predefinidos los cuales ayudarán a la comodidad para el lector.
+
+            La principal razón por la que se agregó Bootstrap 5 al proyecto
+            es que esta libreria cuenta con una implementación para el botón
+            de la barra de navegación para tamaños pequeños.
+
+            La intalación en el proyecto se hizo de acuerdo a la documentación
+            oficial del proyecto en el siguiente enlace:
+            https://getbootstrap.com/docs/5.1/getting-started/introduction/
+        -->
+        <!--Enlace a hoja de estilos de librería externa bootstrap 5 -->
+        <link 
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+            rel="stylesheet" 
+            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
+            crossorigin="anonymous"
+        >
+        <!--Enlace a scripts de librería externa bootstrap 5-->
+        <script 
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
+            crossorigin="anonymous"
+        ></script>
+        <!--Enlace a scripts de librería phaser-->
+        <script 
+            src="https://cdn.jsdelivr.net/npm/phaser@3.15.1/dist/phaser-arcade-physics.min.js"
+        ></script>
+        <!--Enlace a script de phaser con toda la lógica correspondiente del mapa interactivo-->
+        <!--
+            Se utiliza el parámetro defer para indicar que se debe cargar el código javascript
+            después de cargar todos los elementos html y así posicionar el canvas correctamente
+        -->
+        <script
+            src="scripts/mapa-interactivo.js"
+            defer
+        ></script>
+    </head>
+    <!--
+        Cuerpo del documento, aqui se colocará todo el contenido gráfico del
+        sitio, el cual estará centrado en informar sobre la ciudad ficticia
+        de Piltover
+    -->
+    <body>
+        <!--
+            Aqui se ha hecho uso de la librería externa bootstrap, a continuación
+            se explicarán las clases utilizadas.
+            - Clase 'navbar': esta permite definir un elemento como una barra 
+            de navegación.
+            - Clase 'navbar-expand-custom' esta permite definir que la barra de 
+            navegación será extendida (osea sin ocultarse en un botón
+            En los tamaños de pantalla grandes, es decir de más de 990 pixeles 
+            de ancho de pantalla.
+            - Clase 'navbar-dark' esta permite indicar que el contenido se 
+            realizará sobre un fondo oscuro
+            - Clase 'navbar-toggler' esta permite indicar que un botón será 
+            el encargado de extender la barra de navegacion
+            en tamaños pequeños de pantalla.
+            - Clase 'navbar-toggler-icon' esta dibuja dentro de un botón el 
+            icono de tres lineas horizontales caracteristico de
+            los botónes que expanden la barra de navegación en tamaños pequeños.
+            - Clase 'collapse' esta indica que un elemento será extendible, 
+            es decir que se va a ocultar y mostrar usando un botón.
+            - Clase 'navbar-collapse' esta indica que un elemento será la 
+            barra de navegación ocultable en tamaños pequeños.
+            - Clase 'navbar-nav' esta indica que se tiene una lista de botones 
+            en la barra de navegación.
+            - Clase 'active' esta indica que el elemento representa la página 
+            actual en vista.
+        -->
+        <!--Titulo principal de la página-->
+        <h1 class="titulo-principal">
+            <img class="imagen" src="imagenes/logo-piltover.png" alt="Piltover1"> Piltover: La ciudad del progreso
+        </h1>
+        <!--
+            Barra de navegación, está permitirá navegar entre las distintas
+            páginas del sitio web
+        -->
+        <nav class="barra-de-navegacion navbar navbar-expand-custom navbar-dark">
+            <!--
+                Botón que muestra y oculta la barra de navegación en tamaños pequeños de pantalla
+
+                Nota: Los atributos data-bs-toggle y data-bs-target son requeridos por la libreria externa
+                bootstrap para enlazar el botón que muestra y oculta la barra de navegación y la correspondiente
+                barra de navegación.
+            -->
+            <button class="boton-barra-de-navegacion navbar-toggler" data-bs-toggle="collapse" data-bs-target="#barra-de-navegacion">
+                Menú <span class="navbar-toggler-icon"></span>
+            </button>
+            <!--Contenido de la barra de navegacion-->
+            <div class="barra-de-navegacion-contenido collapse navbar-collapse" id="barra-de-navegacion">
+                <!--Lista de enlaces de la barra de navegacion-->
+                <ul class="barra-de-navegacion-contenido navbar-nav">
+                    <!--Enlace a página principal-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" target="_self">Inicio</a>
+                    </li>
+                    <!--Enlace a página de ubicación-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="ubicacion.html" target="_self">Ubicación</a>
+                    </li>
+                    <!--Enlace a página de personajes-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="personajes.html" target="_self">Personajes</a>
+                    </li>
+                    <!--Enlace a página de actividades-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="actividades.html" target="_self">Actividades</a>
+                    </li>
+                    <!--Enlace a página de historia-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="historia.html" target="_self">Historia</a>
+                    </li>
+                    <!--Enlace a página de mapa interactivo-->
+                    <li class="nav-item">
+                        <a class="nav-link active" href="mapa-interactivo.html" target="_self">Mapa interactivo</a>
+                    </li>
+                    <!--Enlace a página de referencias-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="referencias.html" target="_self">Referencias</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--Titulo de la sección-->
+        <h2 class="titulo-seccion mb-3">Mapa Interactivo de Piltover</h2>
+        <!--Texto de contenido-->
+        <p class="texto-de-contenido">
+            Presiona los botones de información para conocer mas sobre algunos sitios relevantes de Piltover
+        </p>
+        <!--
+            Mapa interactivo
+            Dentro de esta etiqueta se va a insertar el canvas de Phaser con la lógica del
+            mapa interactivo de Piltover. Esta insersión se realizará con Javascript en el
+            archivo mapa-interactivo.js
+        -->
+        <p class="mapa-interactivo mt-3"></p>        
+        <!--Pie de página-->
+        <footer class="pie-de-pagina">
+            © Ricardo Andrés Calvo Méndez - Universidad Nacional de Colombia
+        </footer>
+        
+    </body>
+</html>

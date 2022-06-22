@@ -117,25 +117,25 @@ var image;
  */
 function preload (){
     // Se carga la imágen de fondo, es decirl, el mapa de Piltover como 'map'
-    this.load.image('map', '../imagenes/mapa-de-piltover.jpg');
+    this.load.image('map', 'imagenes/mapa-de-piltover.jpg');
     // Se carga la imágen del botón no presionado como 'unpressed'
-    this.load.image('unpressed', '../imagenes/boton-no-presionado.png');
+    this.load.image('unpressed', 'imagenes/boton-no-presionado.png');
     // Se carga la imágen del botón presionado como 'pressed'
-    this.load.image('pressed', '../imagenes/boton-presionado.png');
+    this.load.image('pressed', 'imagenes/boton-presionado.png');
     // Se carga la imágen de particula azul como 'particle'
-    this.load.image('particle', '../imagenes/blue.png');
+    this.load.image('particle', 'imagenes/blue.png');
     // Se carga el audio correspondiente al presionar un botón interactivo
-    this.load.audio('button', '../sonidos/boton.wav');
+    this.load.audio('button', 'sonidos/boton.wav');
     // Se carga la imagen correspondiente al laboratorio de Heimmerdinger
-    this.load.image("lab", '../imagenes/laboratorio-miniatura.jpg');
+    this.load.image("lab", 'imagenes/laboratorio-miniatura.jpg');
     // Se carga la imagen correspondiente al distrito de artes
-    this.load.image("art", '../imagenes/arte-miniatura.jpg');
+    this.load.image("art", 'imagenes/arte-miniatura.jpg');
     // Se carga la imagen correspondiente a los carriles
-    this.load.image("road", '../imagenes/carriles-miniatura.jpg');
+    this.load.image("road", 'imagenes/carriles-miniatura.jpg');
     // Se carga la imagen correspondiente a los carriles
-    this.load.image("police", '../imagenes/policia-miniatura.jpg');
+    this.load.image("police", 'imagenes/policia-miniatura.jpg');
     // Se carga la imagen correspondiente a los hexgates
-    this.load.image("hexgate", '../imagenes/hexgates-miniatura.jpg');
+    this.load.image("hexgate", 'imagenes/hexgates-miniatura.jpg');
 }
 
 /**
